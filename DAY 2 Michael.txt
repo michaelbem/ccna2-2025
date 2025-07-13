@@ -1,0 +1,267 @@
+
+
+Normal				IPv4NE					IPv6NE
+1-9					0-255					0-9,a-f
+
+7999				7.255.255.255			7fff
+8000				8.0.0.0					:8000:
+8001				8.0.0.1					8001
+
+3999				3.255.255.255			3fff
+4000				4.0.0.0					:4000:
+4001				4.0.0.1					4001
+
+
+2908				2.255.0.254				2f0e
+2909				2.255.0.255				2f0f
+2910				2.255.1.0				2f10
+
+
+6998				6.0.255.254				60fe
+6999				6.0.255.255				60ff
+6100				6.1.0.0					6100
+
+
+Task2 : Subnetting for NE, SE, CyberSec, AWS, Azure
+
+How to subnet:
+
+Ex1: Design and implement Accenture.com Network 10.0.0.0/8 with 1,500 agents, host, devices:
+CSi :
+ConvertIT : 1500 is 11 bits
+substract : /32 - /11 = /21
+IpasokSaHiwa: ipasok 8i sa 3rd Hiwa
+Accenture.com: 10.0.8.0/21 (+1)
+1st IP: 10.0.8.1
+Last IP : 10.0.15.255
+Not Accenture.com: 10.0.16.0/21 (-1)
+
+************************************
+
+Ex2: Design and implement telus.com Network 10.0.0.0/8 with 2,800 agents, host, devices:
+
+
+C: 2,800 is 12bits
+S: /32 - /12 = /20
+I: ipasok 16i sa 3rd
+
+Telus.com : 10.0.16.0 /20 (+1)
+1st IP: 10.0.16.1
+Last: 10.0.31.255
+Not Telus: 10.0.32.0 (-1)
+
+************************************
+
+Ex3: Design and implement etelecare.com Network 10.0.0.0/8 with 4,500 agents, host, devices:
+
+C: 4,500 is 13bits
+S: /32 - /13 = /19
+I: ipasok 32i sa 3rd
+
+etelecare.com : 10.0.32.0 /19 (+1)
+1st IP: 10.0.32.1
+Last: 10.0.63.255
+Not etelecare: 10.0.64.0 /19 (-1)
+
+************************************
+
+Ex4: Design and implement SykesCebu.com Network 10.0.0.0/8 with 750 agents, host, devices:
+
+C: 750 is 10bits
+S: /32 - /10 = /22
+I: ipasok 4i sa 3rd
+
+SykesCebu.com : 10.0.4.0 /22 (+1)
+1st IP: 10.0.4.1
+Last: 10.0.7.255
+Not SykesCebu: 10.0.8.0 /22 (-1)
+
+************************************
+
+Ex5: Design and implement pnp.gov.ph Network 10.0.0.0/8 with 220 agents, host, devices:
+
+C: 220 is 8bits
+S: /32 - /8 = /24
+I: ipasok 1i sa 3rd
+
+pnp.gov.ph : 10.0.1.0 /24 (+1)
+1st IP: 10.0.1.1
+Last: 10.0.1.255
+Not pnp.gov.ph: 10.0.2.0 /24 (-1)
+
+************************************
+
+Ex5: Design and implement bdo.com.ph Network 10.0.0.0/8 with 1750 agents, host, devices:
+
+
+C: 1750 is 11bits
+S: /32 - /11 = /21
+I: ipasok 8i sa 3rd
+
+pnp.gov.ph : 10.0.8.0 /21 (+1)
+1st IP: 10.0.8.1
+Last: 10.0.15.255
+Not pnp.gov.ph: 10.0.16.0 /21 (-1)
+
+
+************************************
+
+Ex5: Design and implement bpimini.com.ph Network 10.0.0.0/8 with 105 agents, host, devices:
+
+
+C: 105 is 7 bits
+S: /32 - /7 = /25
+I: ipasok 7 sa 4th
+
+bpimini.com.ph: 10.0.0.128 /21 (+1)
+1st IP: 10.0.0.129
+Last: 10.0.0.255
+Not bpimini.com.ph: 10.0.1.0 /21 (-1)
+
+************************************
+
+Ex5: Design and implement bpimini.com.ph Network 10.0.0.0/8 with 105 agents, host, devices:
+
+
+C: 105 is 7 bits
+S: /32 - /7 = /25
+I: ipasok 7 sa 4th
+
+bpimini.com.ph: 10.0.0.128 /21 (+1)
+1st IP: 10.0.0.129
+Last: 10.0.0.255
+Not bpimini.com.ph: 10.0.1.0 /21 (-1)
+
+
+************************************
+
+How to answer all difficuly question on exam
+
+Master the 5 hit combo
+1. Network Address
+2. Valid Range
+3. Broadcast
+4. Number of Host
+5. Number of Subnets
+
+Ex1. 192.168.50.99/27
+1. To get network address: /27 is 4th,32i
+	0,32,64,96,128
+= network address: .96
+
+2. Valid Range : 97-127
+
+3. Broadcast Add: .127
+
+4. Number of Host
+	/32 - /5 = /27
+	2r5 = 32-2 = 30 host
+
+5. Subnets:
+	*Note : 192.168.x.x is /24 + /3 = /27
+	2r3 = 8-2 = 6 Subnets
+
+************************************
+
+Ex1. 192.168.10.50 /29
+1. To get network address: /29 is 4th,8i
+	0,32,64,96,128
+= network address: .48
+
+2. Valid Range : .49 to .56
+
+3. Broadcast Add: .55
+
+4. Number of Host
+	/32 - /3 = /29
+	2r3 = 8-2 = 6 host
+
+5. Subnets:
+	*Note : 192.168.x.x is /24 + /3 = /27
+	2r5 = 32-2 = 30 Subnets
+	
+************************************
+
+Ex1. 192.168.25.85 /26
+1. To get network address: /26 is 4th,64i anong 64 near 85 = 64
+
+= network address: .64
+
+2. Valid Range : .65 to .127
+
+3. Broadcast Add: .127
+
+4. Number of Host
+	/32 - /6 = /24
+	2r6 = 62 host
+
+5. Subnets:
+	192.168.x.x is /24 + /2 = /26
+	2r2 = 2 Subnets
+	
+************************************
+
+Ex1. 192.168.25.115 /28
+1. To get network address: /28 is 4th, 16i
+
+32 + 32 = 64 + 32 = 96 + 16 = 112
+
+NETWORK: 192.168.25.112
+
+NEXT: 192.168.25.128
+
+	"Think of a number that is closest but does not exceed the value on the 4th (115), that is also divisible by the i (16i)"
+
+= network address: .64
+
+2. Valid Range : .113 - 127
+
+3. Broadcast Add: .127
+
+4. Number of Host
+	/32 - /28 = 
+	2r6 = 62 host
+
+5. Subnets:
+	192.168.x.x is /24 + / = /26
+	2r2 = 2 Subnets
+
+************************************
+
+
+10.50.199.55 /23
+
+1. To get network address: /23 is 3rd
+	0,23
+	Network = 23
+	
+Network : 10.50.198.0 - 10.50.200.0
+
+2 Valid Range: 10.50.198.1 - 10.50.199.254
+
+3. BC:10.50.199.255
+
+4. /32 - / = 23, 2r9= 510 hosts
+
+5. Oranigal of 10.x.x.x is /8 + / = /23 2r15 = 16,384 subnets
+
+
+************************************
+
+172.16.70.23 /22
+4i, 3rd
+
+0,4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68
+
+Network: 172.16.68.0-72.0
+
+Valid Range : 172.16.68.1 - 172.16.71.254
+
+BC: 172.16.71.255
+
+Host: /32 - / = 22, 2r10= 1022 hosts
+subs: /16 + / = /22, 2r6 = 62 subnets
+
+
+
+
