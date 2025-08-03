@@ -142,15 +142,16 @@ ipv6  route  ::/0   face:cafe:face:cafe::aaaa
 
 How to jailBreak forgotten Password:
 1. remove power, press mode after 8 secs:
-2. switch: 
+2. switch: HOW TO JAILBREAK A CISCO SWITCH
             flash_init
 	    load_helper
+	    rename flash:config.text flash:config.old
             delete  flash:config.text
             boot
 
 !@@@CORE SWITCH SA TAAS
 config t
-   hostname COREtaas_
+   hostname COREtaas_41
    enable secret pass
    service password-encryption
    no logging console
@@ -165,24 +166,24 @@ config t
       exec-timeout 0 0
    Int Vlan 1
      no shutdown
-	 ip add 10._.1.2 255.255.255.0
+	 ip add 10.41.1.2 255.255.255.0
 	 description MGMTDATA
    Int Vlan 10
      no shutdown
-	 ip add 10._.10.2 255.255.255.0
+	 ip add 10.41.10.2 255.255.255.0
 	 description WIRELESS
    Int Vlan 50
      no shutdown
-	 ip add 10._.50.2 255.255.255.0
+	 ip add 10.41.50.2 255.255.255.0
 	 description IPCCTV
    Int Vlan 100
      no shutdown
-	 ip add 10._.100.2 255.255.255.0
+	 ip add 10.41.100.2 255.255.255.0
 	 description VOICEVLAN
 
 !@@@LeafSwitchONLY
 config t
-   hostname COREbaba_
+   hostname COREbaba_41
    enable secret pass
    service password-encryption
    no logging console
@@ -198,22 +199,22 @@ config t
    Int Gi 0/1
      no shutdown
 	  no switchport
-	  ip add 10._._.4 255.255.255.0
+	  ip add 10.41.41.4 255.255.255.0
    Int Vlan 1
      no shutdown
-	 ip add 10._.1.4 255.255.255.0
+	 ip add 10.41.1.4 255.255.255.0
 	 description MGMTDATA
    Int Vlan 10
      no shutdown
-	 ip add 10._.10.4 255.255.255.0
+	 ip add 10.41.10.4 255.255.255.0
 	 description WIRELESS
    Int Vlan 50
      no shutdown
-	 ip add 10._.50.4 255.255.255.0
+	 ip add 10.41.50.4 255.255.255.0
 	 description IPCCTV
    Int Vlan 100
      no shutdown
-	 ip add 10._.100.4 255.255.255.0
+	 ip add 10.41.100.4 255.255.255.0
 	 description VOICEVLAN
 
 TASK3: THE ULTIMATE SKILL FOR A NETWORK ENGINEER.
@@ -276,9 +277,9 @@ end
 TASK7: HOW TO BECOME A WORLD-CLASS NETWORK ENGINEER
 SPECIALIZING IN SWITCH:
 Master the 4 super Hereos of Switching
-Qpid: 802.1Q:trunking
+Qpid: 802.1Q:trunking (access port and trunk port)
 "make switch love each other!"LQ
-Darna: 802.1d: STP
+Darna: 802.1d: STP 
 "slowly protect switches" , wait 30 seconds 
 lis=15, lrn=15s, fwd: or blk.
 WonderWoman: 802.1w: rapidSTP
@@ -300,7 +301,7 @@ Int Range fa0/10-12
 Dot1q = Qupid,mave switches love each other:
       IEEE standard where SW will from Layer 2 trunks
 
-TASK9: SPANNING-TREE PROTOCOL: 802.1D: protect switches Slowly.
+TASK9: SPANNING-TREE PROTOCOL: 802.1D: protect switches Slowly. (BLock, Listen, Learn, Forward)
 blk-lis-lrn-fwd = 30 seconds.
 wireshark = bridge priority is 32768 = very Hackable!
 " bobo/inutil ang Network Engineer nyo sa company!"
@@ -724,5 +725,6 @@ how to get certified:
 2. Lab: NAT and DHCP:
 
 3. ask sa CHAT: "latest reivewer"
+
 
 
