@@ -1,0 +1,115 @@
+1. 000a:000c:0000:0000:0000:0000:0000:0000 /64
+= a:c::
+
+2. 0000:0000:0000:0000:0000:0000:0000:0000 /0
+= ::
+
+3. fe80:0000:0000:0000:000a:0000:0000:000f /64
+= fe80::a:0:0:f
+
+4. 2002:6500:0000:3000:0000:0000:0000:0000 /64
+= 2002:6500:0:3000
+
+5. 0000:0000:0000:0000:0000:0000:0000:0001 /128
+= ::1
+
+6. ff00:0000:0000:beef:a00a:0aa0:0000:0000 /8
+= ff00::beef:a00a:aa0:0:0
+
+
+*SUBNETTING
+
+ex1. SUBNET 2001:df0:b740:: /48
+into 750 gov't departments.
+rivanMETHOD: CAi method: Convert,Addto/, iFingerMo.
+
+conv : 750 is 10 bits
+Add: /48 + 10 bits = /58
+iFingerMo: 
+	8	4	2	1		8	4	2	1		8	4	2	1		8	4	2	1
+1st 0	0	0	0		0	0	0	0		0	0
+2nd	0	0	0	0		0	0	0	0		0	4
+3rd	0	0	0	0		0	0	0	0		0	8
+4th	0	0	0	0		0	0	0	0		0	c
+
+0000
+0040
+0080
+00c0
+0100
+0140
+
+conf t
+ipv6 unicast-routing
+int lo 0
+	ipv6 add 2001:df0:b740:0000::a/58
+int lo 1
+	ipv6 add 2001:df0:b740:0040::a/58
+int lo 2
+	ipv6 add 2001:df0:b740:0080::a/58
+int lo 3
+	ipv6 add 2001:df0:b740:00c0::a/58
+int lo 4
+	ipv6 add 2001:df0:b740:0100::a/58
+int lo 5
+	ipv6 add 2001:df0:b740:0140::a/58
+int lo 6
+	ipv6 add 2001:df0:b740:0180::a/58
+int lo 7
+	ipv6 add 2001:df0:b740:01c0::a/58
+int lo 8
+	ipv6 add 2001:df0:b740:0200::a/58
+int lo 9
+	ipv6 add 2001:df0:b740:0240::a/58
+int lo 10
+	ipv6 add 2001:df0:b740:0280::a/58
+
+
+ex2. SUBNET 2001:df0:b880:: /48
+into 28 gov't departments.
+rivanMETHOD: CAi method: Convert,Addto/, iFingerMo.
+
+conv : 28 is 5 bits
+Add: /48 + 5 bits = /53
+iFingerMo: 
+	8	4	2	1		8	4	2	1		8	4	2	1		8	4	2	1
+1st 0	0	0	0		0
+2nd	0	0	0	0		8
+3rd	0	0	0	1		0	
+4th	0	0	0	0		0
+
+0000 0
+0000 8
+0001 0
+0001 8
+0002 0
+0002 8
+
+conf t
+ipv6 unicast-routing
+int lo 0
+	ipv6 add 2001:df0:b880:0000::a/53
+int lo 1
+	ipv6 add 2001:df0:b880:0800::a/53
+int lo 2
+	ipv6 add 2001:df0:b880:1000::a/53
+int lo 3
+	ipv6 add 2001:df0:b880:1800::a/53
+int lo 4
+	ipv6 add 2001:df0:b880:2000::a/53
+int lo 5
+	ipv6 add 2001:df0:b880:2800::a/53
+int lo 6
+	ipv6 add 2001:df0:b880:30000::a/53
+	
+	
+	
+	
+config t
+int fa 0/3
+ shut
+ no shut
+int fa 0/5
+ shut
+ no shut
+end
